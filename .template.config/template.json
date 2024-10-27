@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Yitzhakpro",
+  "identity": "Yitzhakpro.CS2PluginStarterKit",
+  "classifications": [
+    "Quickstart",
+    "CS2",
+    "Plugin"
+  ],
+  "name": "CS2 Plugin Starter Kit",
+  "shortName": "cs2-plugin-starter-kit",
+  "sourceName": "CS2PluginStarterKit",
+  "preferNameDirectory": true,
+  "symbols": {
+    "TargetFramework": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "net8.0",
+      "replaces": "__TargetFramework__"
+    },
+    "CounterStrikeSharpVersion": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "1.0.284",
+      "replaces": "__CounterStrikeSharpVersion__"
+    }
+  }
+}
