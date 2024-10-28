@@ -23,6 +23,12 @@
       "datatype": "string",
       "defaultValue": "1.0.284",
       "replaces": "__CounterStrikeSharpVersion__"
+    },
+    "DevServerFolder": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "",
+      "replaces": "__DevServerFolder__"
     }
   }
 }

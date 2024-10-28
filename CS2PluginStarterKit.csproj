@@ -6,9 +6,18 @@
 
         <OutputPath>bin\$(Configuration)\$(SolutionName)\CS2PluginStarterKit\</OutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+        <AdditionalOutputdir>__DevServerFolder__</AdditionalOutputdir>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="CounterStrikeSharp.API" Version="__CounterStrikeSharpVersion__"/>
+
+        <PluginFiles Include="$(OutputPath)\**\*"/>
     </ItemGroup>
+
+    <Target Name="CopyPluginBuildToDevServer" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug' AND '$(AdditionalOutputDir)' != ''">
+        <Message Importance="normal" Text="Copying build output $(OutputPath)\**\* to $(AdditionalOutputDir)\CS2PluginStarterKit"/>
+        <Copy SourceFiles="@(PluginFiles)" DestinationFolder="$(AdditionalOutputDir)\CS2PluginStarterKit"/>
+    </Target>
 </Project>
